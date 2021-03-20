@@ -29,6 +29,93 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+	.wrapper{
+		margin-top: 10%;
+	  }
+	  
+	  .wrapper h1{
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-size: 2em;
+		margin-bottom: 60px;
+		text-align: left;
+
+	  }
+	  
+	  .team{
+		display: flex;
+		justify-content: center;
+		width: auto;
+		margin-top: 10em;
+		text-align: center;
+		flex-wrap: wrap;
+	  }
+	  
+	  .team .team_member{
+		background: inherit;
+		margin: 2em;
+		margin-bottom: 50px;
+		width: 300px;
+		padding: 20px;
+		border: 5px;
+		border-style: solid;
+		border-radius: 8px;
+		border-color: #a4c8f2;
+		line-height: 30px;
+		color: #8e8b8b;  
+		position: relative;
+	  }
+
+	  .team .team_member.alt{
+		border-color: #e6a1a4;
+	
+	  }
+	  .team .team_member.alt2{
+		border-color: #ffdabb;
+	
+	  }
+	  
+	  .team .team_member h3{
+		color: inherit;
+		font-size: 26px;
+		margin-top: 50px;
+	  }
+	  
+	  .team .team_member p.role{
+		color: rgb(168, 168, 168);
+		margin: 12px 0;
+		font-size: 20px;
+		
+		/* text-transform: uppercase; */
+	  }
+	  .team .team_member p{
+		color: rgb(168, 168, 168);
+		margin-bottom:  0;
+		font-size: 20px;
+		
+		/* text-transform: uppercase; */
+	  }
+	  
+	  .team .team_member .team_img{
+		position: absolute;
+		top: -120px;
+		left: 35%;
+		transform: translateX(-50%);
+		/* transform: translateY(-150%); */
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		background: inherit;
+		
+	  }
+	  
+
+	  .team .team_member .team_img img{
+		width: auto;
+		height: auto;
+		padding: 10px;
+	  }
+
+
 body {
 	line-height: 1;
 }
@@ -2040,7 +2127,7 @@ input, select, textarea {
 				transition: background-color .2s ease-in-out;
 				display: block;
 				text-align: center;
-				background: #f0d8c4;
+				background: #ffdabb;
 				border-radius: 100%;
 				width: 2.25em;
 				height: 2.25em;
@@ -2102,19 +2189,19 @@ input, select, textarea {
 			}
 
 			ul.special li:hover a:before {
-				background: #b9d2ce;
+				background: #adc4c0;
 			}
 			ul.special li.alt:hover a:before {
-				background: #b9d2ce;
+				background: #a1c9c0;
 			}
 			ul.special li.alt2:hover a:before {
-				background: #b9d2ce;
+				background: #e6c8b0;
 			}
 			ul.special li.alt3:hover a:before {
-				background: #b9d2ce;
+				background: #cc8f92;
 			}
 			ul.special li.alt4:hover a:before {
-				background: #b9d2ce;
+				background: #937e9e;
 			}
 
 /* Meta */
@@ -2426,7 +2513,7 @@ input, select, textarea {
 		top: 0;
 		left: 0;
 		z-index: 1000;
-		background-color: rgba(169, 209, 255, 0.85);
+		background-color: rgba(169, 209, 255, 0.95);
 		background-image: url("images/overlay.png");
 		width: 100%;
 		height: 3.25em;

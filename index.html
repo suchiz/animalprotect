@@ -28,6 +28,7 @@
 		<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 	</head>
+
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 
@@ -48,58 +49,83 @@
 				<nav id="nav">
 
 					<ul>
-						<li class="current"><a href="index.html">Acceuil</a></li>
+						<li class="current"><a href="#header">Acceuil</a></li>
 						<li>
-							<a href="#">Nos produits</a>
+							<a href="shop.html">Nos produits</a>
 							<ul>
 								<!-- <li><a href="#">Snacks</a></li> -->
 								<li><a href="#">Accessoires</a>
 									<ul>
-										<li><a href="#">Laisses</a></li>
-										<li><a href="#">Protections</a></li>
-										<li><a href="#">Vetements</a></li>
-										<li><a href="#">Paniers</a></li>
-										<li><a href="#">Brosses</a></li>
+										<li><a href="#">Rafraichissant</a></li>
+										<li><a href="#">Hygiène</a></li>
+										<li><a href="#">Voiture</a></li>
+										<li><a href="#">Education</a></li>
+										<li><a href="#">Manteaux</a></li>
+										<li><a href="#">Pull</a></li>
 									</ul>
 								</li>
-								<li>
-									<a href="#">Alimentation</a>
+
+
+								<li><a href="#">Alimentation</a>
 									<ul>
-										<li><a href="#">Croquettes</a>
+										<li><a href="#">Croquettes chien</a>
 											<ul>
-												<li><a href="#">Biofood</a></li>
-												<li><a href="#">Nutrivet</a></li>
+												<li><a href="#">Acana</a></li>
+												<li><a href="#">Biofood</a></li>											
 												<li><a href="#">Caniplex</a></li>
-												<li><a href="#">Locales</a></li>
-												<li><a href="#">Naturelles</a></li>
+												<li><a href="#">Carnilove</a></li>
+												<li><a href="#">Nutrivet</a></li>
+												<li><a href="#">Orijen</a></li>								
 											</ul>
 										</li>
-										<li><a href="#">Snacks</a>
+
+										<li><a href="#">Croquettes chats</a>
 											<ul>
 												<li><a href="#">Friandise</a></li>
 												<li><a href="#">Biscuits</a></li>
 												<li><a href="#">Os à mâcher</a></li>
 												<li><a href="#">Sticks</a></li>
-										
+											</ul>
+										</li>
+
+										<li><a href="#">Croquettes NACS</a>
+											<ul>
+												<li><a href="#">Friandise</a></li>
+												<li><a href="#">Biscuits</a></li>
+												<li><a href="#">Os à mâcher</a></li>
+												<li><a href="#">Sticks</a></li>
 											</ul>
 										</li>
 										<!-- <li><a href="#">Bio</a></li> -->
 									</ul>
 								</li>
-								<li><a href="#">Jouets</a>
+
+
+								<li><a href="#">Sports</a>
 									<ul>
-										<li><a href="#">Balles</a></li>
-										<li><a href="#">Biscuits</a></li>
-										<li><a href="#">Os à mâcher</a></li>
-										<li><a href="#">Sticks</a></li>
-								
+										<li><a href="#">Canicross/Caniutt</a>
+											<ul>
+												<li><a href="#">Inlandsis</a></li>
+												<li><a href="#">Manmat</a></li>
+												<li><a href="#">Zero DC</a></li>
+												<li><a href="#">Kit initiation</a></li>
+											</ul>
+										</li>
+
+										<li><a href="#">Aquatique</a>			
+											<ul>
+												<li><a href="#">Ruffwear</a></li>
+												<li><a href="#">Trixie</a></li>
+											</ul>	
+										</li>
 									</ul>
 								</li>
+
 							</ul>
 						</li>
 						<!-- <li><a href="left-sidebar.html">Nos produits</a></li> -->
-						<li><a href="">Notre association</a></li>
-						<li><a href="">Contact</a></li>
+						<li><a href="" id="association">Notre association</a></li>
+						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</nav>
 
@@ -112,11 +138,11 @@
 					</div>
 				</section> -->
 				<section class="box highlight">
-					<ul class="special" style="margin-bottom: 2em;">
-						<li class="alt"><a href="#" class="icon solid fa-dog" > </a> Notre concept</li>
-						<li class="alt2"><a href="#" class="icon solid fa-box-open"></a> Nos produits</li>
-						<li class="alt3"><a href="#" class="icon solid fa-hand-holding-heart"></a>Notre association</li>
-						<li class="alt4"><a href="#" class="icon solid fa-child"></a>Notre staff</li>
+					<ul id="mainButton" class="special" style="margin-bottom: 0em;">
+						<li class="alt2"><a href="#concept" class="icon solid fa-dog" > </a> <p style="font-size: 19px; padding-top: 10px;">Notre concept</p> </li>
+						<li class="alt"><a href="#" class="icon solid fa-box-open"></a> <p style="font-size: 19px; padding-top: 10px;">Nos produits</p> </li>
+						<li class="alt3"><a href="#" class="icon solid fa-hand-holding-heart"></a><p style="font-size: 19px; padding-top: 10px;">Notre association</p></li>
+						<li class="alt4"><a href="#staff" class="icon solid fa-child"></a><p style="font-size: 19px; padding-top: 10px;">Notre staff</p></li>
 					</ul>
 					<header >
 						<h2>BIENVENUE DANS NOTRE MAGASIN</h2>
@@ -132,9 +158,6 @@
 					<div class="container">
 						<div class="row gtr-200">
 							<div class="col-12">
-
-								
-					
 
 							</div>
 							<div class="col-12">
@@ -309,27 +332,75 @@
 					<div class="container">
 						<div class="row gtr-200">
 							<div class="col-12">
-
 								<!-- About -->
 									<section>
-										<h2 class="major"><span>QUEL EST NOTRE CONCEPT ?</span></h2>
+										<h2 class="major" id="concept"><span>QUEL EST NOTRE CONCEPT ?</span></h2>
 										<p style="text-align: justify;">
-											Investis dans la <b>protection animale</b> depuis plusieurs années, nous avons toujours voulu donner une <b>nouvelle image</b> aux animaleries traditionnelles.
-											Nous voulons, grâce à ce magasin, permettre le développement d'associations de protection animale, y compris "<a href="#"><b>Un avenir pour eux</b></a>"" que nous avons créé et dans laquelle nous sommes aujourd'hui <b>bénévoles</b>.
+											Véritables amoureux des animaux, nous avons choisi d’allier <b>passion et métier</b> en ouvrant en 2015, votre magasin spécialisé en animaux de compagnie, <b>Animal Protect</b>. 
+											
+											Très engagés dans la <b>protection animale</b> et le <b>respect du vivant</b>, notre nouveau concept d’animalerie sans animaux en vente reflète notre éthique et notre état d’esprit. 
 											<br>
-											<br> Nous privilégions les bons conseils et la proximité avec notre clientèle afin de vous satisfaire le mieux possible.
-											Bienveillance et éducation positive sont nos maîtres mots.
-											Toute adhésion à notre association vous donne droit à 10% de remise immédiate toute l'année sur l'ensemble du magasin.
-											Nous essaierons de sensibiliser le plus grand nombre à nos valeurs, en luttant au mieux contre les trafics d'animaux, la fourrure, la corrida et toute exploitation animale.
+											
+											C'est également pour cela que, dans notre magasin, vous trouverez des <b>croquettes naturelles</b> avec des viandes d’excellentes qualités répondant aux mieux aux besoins primaires de vos chiens et chats mais
+											aussi de nombreuses friandises pour chiens et chats, jouets, accessoires axés <b>100% sur le bien-être</b> et le respect de leurs besoins.
+											<br>
+											
+											Nous voulons que chiens, chats, chiots, chatons et maintenant NACS (lapins, cochons d’Indes, hamsters, furets…) trouvent leurs bonheurs avec des produits adaptés au plus près de leurs besoins. 
+											<br>
+											<br> 
+		
+											De plus, nous sommes partenaires avec des <b>associations de protection animale</b> sur Toulouse et sa région et luttons activement au quotidien pour leur venir en aide. 
+											<br>
+									
+											En tant que clients Animal Protect, <b>vous pouvez devenir acteur</b> pour le sauvetage et la prise en charge d’animaux abandonnés ou dans le besoin, en adhérant à notre association partenaire. <b>Vous bénéficierez en plus de remises immédiates</b>. 
+											<br>
+											<br> 
+									
+											Nous serons heureux de vous accueillir dans votre animalerie toulousaine nouvelle génération, basée sur le conseil et la diversité de produits. Toujours dans le bien-être animal et la recherche constante de votre satisfaction. 
 										</p>
+										<p style="font-size: 1.5em;">A très bientôt !</p>
 									</section>
-
 							</div>
-							<div class="col-12">
 
+							<div class="col-12">
+								<!-- About -->
+									<section>
+										<h2 class="major" id="staff"><span>Le Staff</span></h2>
+										<div class="team">
+											<div class="team_member">
+												<div class="team_img">
+													<img src="images/staff/emp1.png" alt="Team_image">
+												</div>
+												<h3>Alexandre</h3>
+												<p class="role">Gérant</p>
+												<p>Souriant, sait faire plus de 20 tractions d'affilé.</p>
+											</div>
+											<div class="team_member alt2">
+												<div class="team_img">
+													<img src="images/staff/emp1.png" alt="Team_image">
+												</div>
+												<h3>Marion</h3>
+												<p class="role">Gérante</p>
+												<p>Souriante et que je ne connais pas assez pour faire une description.</p>
+											</div>
+											<div class="team_member alt">
+												<div class="team_img">
+													<img src="images/staff/emp1.png" alt="Team_image">
+												</div>
+												<h3>Suchiz</h3>
+												<p class="role">Web designer</p>
+												<p>Machine de guerre au chomage qui n'a rien à faire</p>
+											</div>
+
+										</div>
+									</section>
+							</div>
+
+							<div class="col-12">
 								<!-- Contact -->
 									<section>
 										<h2 class="major"><span>Suivez nous</span></h2>
+		
 										<ul class="contact">
 											<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
 											<li><a class="icon brands fa-instagram" href="#"><span class="label">Instagram</span></a></li>
@@ -356,10 +427,13 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<!-- <script src="assets/js/main.js"></script> -->
+			<script src="assets/js/main_scrolly.js"></script>
+			
 
 	</body>
 </html>
