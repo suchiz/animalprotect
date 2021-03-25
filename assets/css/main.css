@@ -66,7 +66,7 @@ footer, header, hgroup, menu, nav, section {
 	  }
 
 	  .team .team_member.alt{
-		border-color: #e6a1a4;
+		border-color: #b8e6dc;
 	
 	  }
 	  .team .team_member.alt2{
@@ -1902,7 +1902,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #c1edbb;
+			background: #bbe8ff;
 		}
 
 		input[type="button"]:active,
@@ -1910,7 +1910,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background: #a1cd9b;
+			background: #bbe8ff;
 		}
 
 		input[type="button"].alt,
@@ -2284,7 +2284,7 @@ input, select, textarea {
 		form input[type="password"]:focus,
 		form select:focus,
 		form textarea:focus {
-			border-color: #a1cd9b;
+			border-color: #bbe8ff;
 		}
 
 	form input[type="text"],
@@ -3024,7 +3024,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:active:before {
-						background-color: #a1cd9b;
+						background-color: #bbe8ff;
 					}
 
 			#navPanel {
