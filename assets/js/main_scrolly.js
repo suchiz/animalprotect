@@ -49,6 +49,7 @@
 			)
 				.appendTo($body);
 
+
 		// Panel.
 			$(
 				'<div id="navPanel">' +

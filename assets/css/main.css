@@ -1215,6 +1215,7 @@ input, select, textarea {
 
 				.row > .col-12-medium {
 					width: 100%;
+					
 				}
 
 				.row > .off-12-medium {
@@ -2714,6 +2715,11 @@ input, select, textarea {
 		padding: 6em 0 6em 0;
 	}
 
+/* mapcontainer */
+	.mapcontainer{
+		display:flex;
+	}
+
 /* Sidebar + Content */
 
 	.sidebar h2.major {
@@ -2729,7 +2735,7 @@ input, select, textarea {
 
 	#footer {
 		text-align: center;
-		padding: 8em 0 8em 0;
+		padding: 0em 0 8em 0;
 	}
 
 		#footer a {
@@ -2862,7 +2868,23 @@ input, select, textarea {
 		display: none;
 	}
 
+
 	@media screen and (max-width: 980px) {
+		.mapcontainer{
+			display:block;
+		}
+
+
+		.team .team_member{
+			margin-top: 6em;
+		  }
+		
+		/* Special */
+
+		ul.special {
+			/* margin: -0.75em 0 2em -0.75em; */
+			padding-top: 5em;
+		}
 
 		/* Basic */
 
@@ -3091,6 +3113,15 @@ input, select, textarea {
 					color: #fff;
 				}
 
+				#navPanel .depth-2 {
+					color: #fff;
+					display: none;
+				}
+				#navPanel .depth-3 {
+					color: #fff;
+					display: none;
+				}
+
 			body.navPanel-visible #page-wrapper {
 				-moz-transform: translateX(275px);
 				-webkit-transform: translateX(275px);
@@ -3116,8 +3147,14 @@ input, select, textarea {
 
 /* Small */
 
-	@media screen and (max-width: 736px) {
 
+	@media screen and (max-width: 736px) {
+		.mapcontainer{
+			display:block;
+		}
+		.team .team_member{
+			margin-top: 6em;
+		  }
 		/* Basic */
 
 			body, input, textarea, select {
@@ -3177,6 +3214,7 @@ input, select, textarea {
 
 			ul.special {
 				margin: -0.75em 0 2em -0.75em;
+				padding-top: 5em;
 			}
 
 				ul.special li {
