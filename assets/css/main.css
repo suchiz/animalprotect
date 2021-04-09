@@ -1849,7 +1849,7 @@ input, select, textarea {
 		.image.featured {
 			display: block;
 			width: 100%;
-			margin: 0 0 2em 0;
+			margin: 0 0 0.5em 0;
 		}
 
 		.image.left {
@@ -2374,7 +2374,28 @@ input, select, textarea {
 		}
 
 	.box.feature {
+		margin-top: 0;
 		text-align: center;
+	}
+	.box.feature p {
+		line-height: 1.25em;
+	}
+	.box.feature h3 {
+		padding: none;
+
+		margin-bottom: 0;
+		font-size: 1.15em;
+	}
+	.box.feature h4 {
+		margin-bottom: 0.2em;
+		padding: none;
+		font-size: 1.10em;
+		color: #7eb5c3;
+	}
+
+	.box.feature h5 {
+		padding: none;
+		font-size: 1em;
 	}
 
 	.box.post header {
