@@ -17,7 +17,7 @@ function inflate(array){
             code += `
             <div class="col-3 col-6-medium col-12-small">
                     <section class="box feature">
-                        <a href="#" class="image featured"><img src="${"images/"+array[index+5].content.$t}" alt="" /></a>
+                        <a href="#" class="image featured"><img src="${"images/produits/"+array[index+5].content.$t}" alt="" /></a>
                         <h3>${array[index].content.$t}</h3>
                         <h4>${array[index+1].content.$t}</h4>
                         <h5>${array[index+2].content.$t+"€"}</h5>
