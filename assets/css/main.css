@@ -29,6 +29,16 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+	#opentime{
+		border-radius: 25px; 
+		border: 5px;
+		width: 442px;
+		height: auto;
+		margin-left: 4em;
+		background-image: url("../../images/informations_large.png");
+	}
+
+
 	.wrapper{
 		margin-top: 10%;
 	  }
@@ -53,6 +63,7 @@ footer, header, hgroup, menu, nav, section {
 	  .team .team_member{
 		background: inherit;
 		margin: 2em;
+		margin-top: 70px;
 		margin-bottom: 50px;
 		width: 300px;
 		padding: 20px;
@@ -71,7 +82,7 @@ footer, header, hgroup, menu, nav, section {
 	  }
 	  .team .team_member.alt2{
 		border-color: #ffdabb;
-	
+
 	  }
 	  
 	  .team .team_member h3{
@@ -84,6 +95,7 @@ footer, header, hgroup, menu, nav, section {
 		color: rgb(168, 168, 168);
 		margin: 12px 0;
 		font-size: 20px;
+		font-weight: bolder;
 		
 		/* text-transform: uppercase; */
 	  }
@@ -1166,7 +1178,7 @@ input, select, textarea {
 				}
 
 				.row > .col-6-medium {
-					width: 50%;
+					width: 30%;
 				}
 
 				.row > .off-6-medium {
@@ -1460,7 +1472,7 @@ input, select, textarea {
 				}
 
 				.row > .col-12-small {
-					width: 100%;
+					width: 30%;
 				}
 
 				.row > .off-12-small {
@@ -2131,57 +2143,20 @@ input, select, textarea {
 				height: 2.25em;
 				line-height: 2.175em;
 				font-size: 5em;
-
 				color: #fff;
 			}
 			
 			ul.special li.alt2 a:before {
-				-moz-transition: background-color .2s ease-in-out;
-				-webkit-transition: background-color .2s ease-in-out;
-				-ms-transition: background-color .2s ease-in-out;
-				transition: background-color .2s ease-in-out;
-				display: block;
-				text-align: center;
 				background: #ffdabb;
-				border-radius: 100%;
-				width: 2.25em;
-				height: 2.25em;
-				line-height: 2.175em;
-				font-size: 5em;
-				color: #fff;
 			}
 			
 			ul.special li.alt3 a:before {
-				-moz-transition: background-color .2s ease-in-out;
-				-webkit-transition: background-color .2s ease-in-out;
-				-ms-transition: background-color .2s ease-in-out;
-				transition: background-color .2s ease-in-out;
-				display: block;
-				text-align: center;
-				
 				background: #e6a1a4;
-				border-radius: 100%;
-				width: 2.25em;
-				height: 2.25em;
-				line-height: 2.175em;
-				font-size: 5em;
-				color: #fff;
 			}
 			
 			ul.special li.alt4 a:before {
-				-moz-transition: background-color .2s ease-in-out;
-				-webkit-transition: background-color .2s ease-in-out;
-				-ms-transition: background-color .2s ease-in-out;
-				transition: background-color .2s ease-in-out;
-				display: block;
-				text-align: center;
+
 				background: #bea3cc;
-				border-radius: 100%;
-				width: 2.25em;
-				height: 2.25em;
-				line-height: 2.175em;
-				font-size: 5em;
-				color: #fff;
 			}
 				ul.special li a:before {
 					-moz-transition: background-color .2s ease-in-out;
@@ -2495,6 +2470,22 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+		.icon.brands:hover {
+			background: #adc4c0;
+		}
+		.icon.brands.alt:hover {
+			background: #a4c8f2;
+		}
+		.icon.brands.alt2:hover  {
+			background: #e6c8b0;
+		}
+		.icon.brands.alt3:hover {
+			background: #cc8f92;
+		}
+		.icon.brands.alt4:hover {
+			background: #937e9e;
+		}
+
 /* Page Wrapper */
 
 	#page-wrapper > section {
@@ -2753,6 +2744,7 @@ input, select, textarea {
 /* mapcontainer */
 	.mapcontainer{
 		display:flex;
+		margin-bottom: 1.5em;
 	}
 
 /* Sidebar + Content */
@@ -2905,8 +2897,18 @@ input, select, textarea {
 
 
 	@media screen and (max-width: 980px) {
+		#opentime{
+			border-radius: 25px; 
+			border: 5px;
+			width: 442px;
+			height: 500px;
+			margin-top: 2em;
+			margin-left: 2em;
+			flex: 50%;
+			background-image: url("../../images/informations_large.png");
+		}
 		.mapcontainer{
-			display:block;
+			display:inline-block;
 		}
 
 
@@ -3184,8 +3186,17 @@ input, select, textarea {
 
 
 	@media screen and (max-width: 736px) {
+		#opentime{
+			border-radius: 25px; 
+			border: 5px;
+			width: 305px;
+			height: 500px;
+			margin-left: 2em;
+			margin-top: 1em;
+			background-image: url("../../images/informations.png");
+		}
 		.mapcontainer{
-			display:block;
+			display:inline-block;
 		}
 		.team .team_member{
 			margin-top: 6em;
@@ -3332,6 +3343,7 @@ input, select, textarea {
 				padding-left: 0;
 				line-height: 1.75em;
 			}
+	
 
 	}
 

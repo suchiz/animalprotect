@@ -36,7 +36,6 @@ function displayCategory(category){
     });
     productTitle.innerHTML = `${category} <span style="font-size: 0.8em">(${filteredArray.length/6}  produits)</span> `;
     inflate(filteredArray, 1);
-    
 }
 
 function inflate(array, page){
@@ -56,8 +55,8 @@ function inflate(array, page){
             code += `
             <div class="col-3 col-6-medium col-12-small">
                     <section class="box feature">
-                        <a href="${displayed_data[index+5].content.$t ? "images/produits/"+displayed_data[index+5].content.$t : console.log("hey")}" class="image featured">
-                        <img src="${displayed_data[index+5].content.$t ? "images/produits/"+displayed_data[index+5].content.$t : console.log("hey")}" alt="" /></a>
+                        <a href="${"images/produits/"+displayed_data[index+5].content.$t}" class="image featured">
+                        <img src="${"images/produits/"+displayed_data[index+5].content.$t}" alt="" /></a>
                         <h3>${displayed_data[index].content.$t}</h3>
                         <h4>${displayed_data[index+1].content.$t}</h4>
                         <h5>${displayed_data[index+2].content.$t+"€"}</h5>

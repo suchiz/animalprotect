@@ -170,77 +170,19 @@
 									<div class="row">
 										<div class="col-9 col-12-medium">
 											<div class="content">
-													<article class="box page-content">
-														<header>
-															<h2 style="font-size: 2.3em;">NOUVEAUX HORAIRES</h2>
-															<!-- <p>Suite aux nouvelles directives gouvernementales, le couvre-feu est désormais à 19H</p> -->
-															<ul class="meta">
-																<li class="icon fa-clock" style="font-size: 1.5em;">20/03/2021</li>
-																
-															</ul>
-														</header>
-			
-														<section>
-															<span class="image featured"><img src="images/actu/actu1.jpg" alt="" /></span>
-															<p style="text-align: justify;">
-																Suite aux nouvelles directives gouvernementales, le couvre-feu est désormais à 19H.
-Nous vous accueillons donc aujourd'hui de 10H à 19H non stop. Pour les jours qui suivent, nous reprendrons nos horaires habituelles. 
-A bientôt dans votre magasin.
-															</p>
-														</section>
+													<article class="box page-content" id="mainActu">
 													</article>
 											</div>
 										</div>
 										<div class="col-3 col-12-medium">
 											<div class="sidebar">
-			
-												<!-- Sidebar -->
-			
-													<!-- Recent Posts -->
-														<section>
-															<h2 class="major" ><span style="left: 10%; text-align: center; width: 77%;">précédemment</span></h2>
-															<ul class="divided">
-																<li>
-																	<article class="box post-summary">
-																		<h3><a href="#">Nouveau snack bar</a></h3>
-																		<ul class="meta" style="margin-bottom: 1em;">
-																			<li class="icon fa-clock">08/03/2021</li>
-																		
-																		</ul>
-																		Notre snack bar s'est agrandi !!! 
-Venez découvrir plein de nouvelles friandises pour le plus grand plaisir de vos loulous !
-																	</article>
-																</li>
-																<li>
-																	<article class="box post-summary">
-																		<h3><a href="#">C'est l'anniversaire de notre Biscotte</a></h3>
-																		<ul class="meta" style="margin-bottom: 1em;">
-																			<li class="icon fa-clock">13/01/2021</li>
-																			
-																		</ul>
-																		Pour l'occasion, nous lui faisons essayer pour son plus grand bonheur pleins de toutes nouvelles friandises NACs. 
-																	</article>
-																</li>
-																<!-- <li>
-																	<article class="box post-summary">
-																		<h3><a href="#">And Another</a></h3>
-																		<ul class="meta">
-																			<li class="icon fa-clock">Yesterday</li>
-																			<li class="icon fa-comments"><a href="#">184</a></li>
-																		</ul>
-																	</article>
-																</li> -->
-															</ul>
-															
-														</section>
-			
-												
-			
+													<section>
+														<h2 class="major" ><span style="left: 10%; text-align: center; width: 77%;">précédemment</span></h2>
+														<ul class="divided" id="sideActus">	
+														</ul>	
+													</section>
 											</div>
 										</div>
-										
-			
-										
 									</div>
 								</div>
 							</div>
@@ -293,7 +235,7 @@ Venez découvrir plein de nouvelles friandises pour le plus grand plaisir de vos
 											Nous travaillons avec des marques réputées mondialement :<br> Ruffwear, Animalin, Julius K-9, Trixie, Zero DC, Inlandsis, Nylabone, KONG, Chuck It, Petstages, JollyBall, Beaphar, Biogance, Arquivet, Flamingo, Martin Sellier, Brandy, Carnilove, Orijen, Acana, Nutrivet, Caniplex, Biofood… 
 
 										</p>
-
+<!-- 
 										<div id="google-reviews"></div>
 
 											<link rel="stylesheet" href="https://cdn.rawgit.com/stevenmonson/googleReviews/master/google-places.css">
@@ -302,47 +244,24 @@ Venez découvrir plein de nouvelles friandises pour le plus grand plaisir de vos
 											<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDeivU57j-macv2fXXgbhKGM6cqMLmnAFI&signed_in=true&libraries=places"></script>
 
 											<script>
-											jQuery(document).ready(function( $ ) {
-											$("#google-reviews").googlePlaces({
-													placeId: 'ChIJv0wBjCO9rhIRf5tNjhcHWPQ' //Find placeID @: https://developers.google.com/places/place-id
-												, render: ['reviews']
-												, min_rating: 4
-												, max_rows:4
-											});
-											});
-											</script>
+												jQuery(document).ready(function( $ ) {
+												$("#google-reviews").googlePlaces({
+														placeId: 'ChIJv0wBjCO9rhIRf5tNjhcHWPQ' //Find placeID @: https://developers.google.com/places/place-id
+													, render: ['reviews']
+													, min_rating: 4
+													, max_rows:4
+												});
+												});
+											</script> -->
+
 									</section>
 							</div>
 							<div class="col-12">
 								<!-- About -->
 									<section>
 										<h2 class="major" id="staff"><span>Le Staff</span></h2>
-										<div class="team">
-											<div class="team_member">
-												<div class="team_img">
-													<img src="images/staff/emp1.png" alt="Team_image">
-												</div>
-												<h3>Alexandre</h3>
-												<p class="role">Gérant</p>
-												<p>Souriant, sait faire plus de 20 tractions d'affilé.</p>
-											</div>
-											<div class="team_member alt">
-												<div class="team_img">
-													<img src="images/staff/emp1.png" alt="Team_image">
-												</div>
-												<h3>Marion</h3>
-												<p class="role">Gérante</p>
-												<p>Souriante et que je ne connais pas assez pour faire une description.</p>
-											</div>
-											<div class="team_member alt2">
-												<div class="team_img">
-													<img src="images/staff/emp1.png" alt="Team_image">
-												</div>
-												<h3>Suchiz</h3>
-												<p class="role">Web designer</p>
-												<p>Machine de guerre au chomage qui n'a rien à faire</p>
-											</div>
-
+										<div class="team" id="staffMembers">
+											
 										</div>
 									</section>
 							</div>
@@ -353,9 +272,9 @@ Venez découvrir plein de nouvelles friandises pour le plus grand plaisir de vos
 										<h2 id = "follow" class="major"><span>Suivez nous</span></h2>
 		
 										<ul class="contact">
-											<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
-											<li><a class="icon brands fa-instagram" href="#"><span class="label">Instagram</span></a></li>
-											<li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
+											<li><a class="icon brands alt fa-facebook-f " href="https://www.facebook.com/animalprotect31/"><span class="label">Facebook</span></a></li>
+											<!-- <li><a class="icon brands alt2 fa-instagram" href="#"><span class="label">Instagram</span></a></li>
+											<li><a class="icon brands alt3 fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li> -->
 										</ul>
 									</section>
 
@@ -375,6 +294,8 @@ Venez découvrir plein de nouvelles friandises pour le plus grand plaisir de vos
 		</div>
 
 		<!-- Scripts -->
+			<script src="assets/js/staffcontent.js"></script>
+			<script src="assets/js/actucontent.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
