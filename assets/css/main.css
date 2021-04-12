@@ -2147,14 +2147,51 @@ input, select, textarea {
 			}
 			
 			ul.special li.alt2 a:before {
+				-moz-transition: background-color .2s ease-in-out;
+				-webkit-transition: background-color .2s ease-in-out;
+				-ms-transition: background-color .2s ease-in-out;
+				transition: background-color .2s ease-in-out;
+				display: block;
+				text-align: center;
+				border-radius: 100%;
+				width: 2.25em;
+				height: 2.25em;
+				line-height: 2.175em;
+				font-size: 5em;
+				color: #fff;
 				background: #ffdabb;
+			
 			}
 			
 			ul.special li.alt3 a:before {
+				-moz-transition: background-color .2s ease-in-out;
+				-webkit-transition: background-color .2s ease-in-out;
+				-ms-transition: background-color .2s ease-in-out;
+				transition: background-color .2s ease-in-out;
+				display: block;
+				text-align: center;
+				border-radius: 100%;
+				width: 2.25em;
+				height: 2.25em;
+				line-height: 2.175em;
+				font-size: 5em;
+				color: #fff;
 				background: #e6a1a4;
 			}
 			
 			ul.special li.alt4 a:before {
+				-moz-transition: background-color .2s ease-in-out;
+				-webkit-transition: background-color .2s ease-in-out;
+				-ms-transition: background-color .2s ease-in-out;
+				transition: background-color .2s ease-in-out;
+				display: block;
+				text-align: center;
+				border-radius: 100%;
+				width: 2.25em;
+				height: 2.25em;
+				line-height: 2.175em;
+				font-size: 5em;
+				color: #fff;
 
 				background: #bea3cc;
 			}
