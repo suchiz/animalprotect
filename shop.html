@@ -139,64 +139,64 @@
 									<!-- Sidebar -->
 										<!-- Recent Posts -->
 											<section>
-												<h2 class="major"><span>Produits</span></h2>
+												<h2 class="major" ><span><a href="shop.html">Produits</a></span></h2>
 												<ul class="divided">
 													<li>
 														<article class="box post-summary">
-															<h3><a href="#">Alimentation</a></h3>
+															<h3><a >Alimentation</a></h3>
 																<div>
 																	<input type="checkbox" id="scales" name="chien">
-																	<label for="scales">Chiens</label>
+																	<label onclick="displayCategory('CHIEN')" style="cursor: pointer;" for="scales">Chien</label>
 																  </div>
 																  <div>
 																	<input type="checkbox" id="scales" name="chien">
-																	<label for="scales">Chats</label>
+																	<label onclick="displayCategory('CHAT')" style="cursor: pointer;"  for="scales">Chats</label>
 																  </div>
 																  <div>
 																	<input type="checkbox" id="scales" name="chien">
-																	<label for="scales">Rongeurs</label>
+																	<label  onclick="displayCategory('RONGEUR')" style="cursor: pointer;" for="scales">Rongeurs</label>
 																  </div>
 														</article>
 													</li>
 													<li>
 														<article class="box post-summary">
-															<h3><a href="#">Accessoires</a></h3>
+															<h3><a>Accessoires</a></h3>
 																<div>
 																	<input type="checkbox" id="scales" name="chien">
-																	<label for="scales">Rafraichissant</label>
+																	<label onclick="displayCategory('RAFRAICHISSANT')" style="cursor: pointer;" for="scales">Rafraichissant</label>
 																  </div>
 																  <div>
 																	<input type="checkbox" id="scales" name="chien">
-																	<label for="scales">Hygiène</label>
+																	<label onclick="displayCategory('HYGIENE')" style="cursor: pointer;" for="scales">Hygiène</label>
 																  </div>
 																  <div>
 																	<input type="checkbox" id="scales" name="chien">
-																	<label for="scales">Voiture</label>
+																	<label onclick="displayCategory('VOITURE')" style="cursor: pointer;" for="scales">Voiture</label>
 																  </div>
 																  <div>
 																	<input type="checkbox" id="scales" name="chien">
-																	<label for="scales">Education</label>
+																	<label onclick="displayCategory('EDUCATION')" style="cursor: pointer;" for="scales">Education</label>
 																  </div>
 																  <div>
 																	<input type="checkbox" id="scales" name="chien">
-																	<label for="scales">Manteaux</label>
+																	<label onclick="displayCategory('MANTEAUX')" style="cursor: pointer;" for="scales">Manteaux</label>
 																  </div>
 																  <div>
 																	<input type="checkbox" id="scales" name="chien">
-																	<label for="scales">Pull</label>
+																	<label onclick="displayCategory('PULL')" style="cursor: pointer;" for="scales">Pull</label>
 																  </div>
 														</article>
 													</li>
 													<li>
 														<article class="box post-summary">
-															<h3><a href="#">Sports</a></h3>
+															<h3><a>Sports</a></h3>
 															<div>
 																<input type="checkbox" id="scales" name="chien">
-																<label for="scales">Cani-Cross / Cani-VTT</label>
+																<label onclick="displayCategory('CANICROSS')" style="cursor: pointer;" for="scales">Cani-Cross / Cani-VTT</label>
 															  </div>
 															  <div>
 																<input type="checkbox" id="scales" name="chien">
-																<label for="scales">Aquatique</label>
+																<label onclick="displayCategory('AQUATIQUE')" style="cursor: pointer;"  for="scales">Aquatique</label>
 															  </div>
 														
 														</article>
@@ -214,7 +214,7 @@
 										<article class="box page-content">
 
 											<header>
-												<h2>NOS PRODUITS</h2>
+												<h2 id="productTitle">TOUS NOS PRODUITS</h2>
 												<!-- <p>Vous trouverez la totalité de notre catalogue très bientôt !</p> -->
 												<!-- <ul class="meta">
 													<li class="icon fa-clock">5 days ago</li>
@@ -230,15 +230,14 @@
 												</div>
 											</section>
 										</article>
-
+										<ul class="actions">
+											<li><button id="prevButton" onclick="prevPressed()" class="button alt">Précédent</button></li>
+											<li><button id="nextButton" onclick="nextPressed()" class="button">Suivant</button></li>
+										</ul>
+								
 								</div>
 							</div>
-							<div class="col-12">
-
-								<!-- Features -->
-						
-
-							</div>
+			
 						</div>
 					</div>
 				</section>
