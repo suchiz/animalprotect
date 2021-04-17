@@ -17,7 +17,7 @@ function submitForm() {
           Host: "smtp.gmail.com",
           Username: 'suchizgames@gmail.com',
           Password: "gjwhxavkhmjzmcnu",/*"gjwhxavkhmjzmcnu"*/
-          To: "suchizgames@gmail.com",
+          To: "marionparant@gmail.com",
           From: "suchizgames@gmail.com",
           Subject: `${name} sent you a message`,
           Body: `Name: ${name} <br/> Email: ${email} <br/> Message: ${message}`,
