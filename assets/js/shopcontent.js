@@ -136,7 +136,7 @@ function inflate(array, page){
                         <h3>${title}</h3>
                         <h4>${brand}</h4>
                         <h5>${price}</h5>
-                        <p>
+                        <p class="elipsedText">
                             ${description} 
                         </p>
                     </section>
@@ -146,6 +146,7 @@ function inflate(array, page){
 
         }
     });
+
     document.getElementById("shopContent").innerHTML = code;
 }
 
@@ -166,9 +167,9 @@ function onItemClick (index){
         <img  style="max-width: 300px"  src="${img}" alt="" />
     </span>
     <div style="flex: 50%">
-    <header >
-    <h2 style="font-size: 2.3em;">${brand}</h2> 
-    <p>${price}</p>
+    <header style="margin: 0em; padding: 0em">
+    <h2 style="font-size: 2.3em; margin-bottom: 0">${brand}</h2> 
+    <p >${price}</p>
     </header>
     <p style="text-align: justify;">
         ${longDescription}
@@ -192,6 +193,7 @@ function backPressed(){
     inflate(shopdata, current_page);
     document.getElementById("actionButtons").style.display="block";
     $('html, body').animate({ scrollTop: 400 }, 'medium');
+    productTitle.innerHTML = `TOUS NOS PRODUITS <span style="font-size: 0.8em">(${Math.ceil(alldata.length/colNumber)}  produits)</span> `
 }
 
 function nextPressed(){

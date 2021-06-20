@@ -78,7 +78,7 @@ footer, header, hgroup, menu, nav, section {
 	}
 	
 	/* Caption text */
-	.text {
+	.textCaroussel {
 	  color: #f2f2f2;
 	  font-size: 15px;
 	  padding: 8px 12px;
@@ -109,7 +109,7 @@ footer, header, hgroup, menu, nav, section {
 	  transition: background-color 0.6s ease;
 	}
 	
-	.active, .dot:hover {
+	.activeDot, .dot:hover {
 	  background-color: #717171;
 	}
 	
@@ -131,6 +131,15 @@ footer, header, hgroup, menu, nav, section {
 	  to {opacity: 1}
 	}
 /* END CAROUSSEL ***********************************/
+
+	.elipsedText {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2; /* number of lines to show */
+		-webkit-box-orient: vertical;
+	}
+
 	#opentime{
 		border-radius: 25px; 
 		border: 5px;
@@ -332,6 +341,22 @@ input, select, textarea {
 			top: 0.775em;
 		}
 
+		h2.major.blue{
+			border-top: solid 5px #a4c8f2;
+		}
+		h2.major.green{
+			border-top: solid 5px #b8e6dc;
+		}
+		h2.major.yellow{
+			border-top: solid 5px #ffdabb;
+		}
+		h2.major.pink{
+			border-top: solid 5px #e6a1a4;
+		}
+		h2.major.purple{
+			border-top: solid 5px #bea3cc;
+		}
+
 			h2.major span {
 				background: #fff;
 				position: relative;
@@ -339,6 +364,8 @@ input, select, textarea {
 				top: -0.775em;
 				padding: 0 1.25em 0 1.25em;
 			}
+
+		
 
 	h3, h4 {
 		font-size: 1.25em;
@@ -2958,6 +2985,22 @@ input, select, textarea {
 
 			#footer h2.major span {
 				background: #f2f5f3;
+			}
+
+			#footer h2.major.blue span{
+				background: #dbebff;
+			}
+			#footer h2.major.green span{
+				background: #c6f0e7;
+			}
+			#footer h2.major.yellow span{
+				background: #faece1;
+			}
+			#footer h2.major.pink span{
+				background: #ddbbbd;
+			}
+			#footer h2.major.purple span{
+				background: #c1b5c7;
 			}
 
 /* Copyright */
