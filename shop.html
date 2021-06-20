@@ -29,7 +29,7 @@
 		<meta name="theme-color" content="#ffffff">
 	</head>
 
-	<body class="homepage is-preload">
+	<body ng-app class="homepage is-preload" >
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -76,10 +76,9 @@
 														<article class="box post-summary">
 															<h3><a >Alimentation</a></h3>
 																<div>
-																	<input type="checkbox" id="scales" name="chien">
-																	<label onclick="displayCategory('CHIEN')" style="cursor: pointer;" for="scales">Chien</label>
-																  </div>
-									
+																	<input type="checkbox" id="scales1">
+																	<label onclick="displayCategory('CHIEN')" style="cursor: pointer;" for="scales1">Chien</label>
+																  </div>		
 																  <div>
 																	<input type="checkbox" id="scales" name="chien">
 																	<label onclick="displayCategory('CHAT')" style="cursor: pointer;"  for="scales">Chats</label>
@@ -88,9 +87,11 @@
 																	<input type="checkbox" id="scales" name="chien">
 																	<label  onclick="displayCategory('RONGEUR')" style="cursor: pointer;" for="scales">Rongeurs</label>
 																  </div>
+																
 														</article>
 													</li>
 													<li>
+														
 														<article class="box post-summary">
 															<h3><a>Accessoires</a></h3>
 																<div>
@@ -155,14 +156,13 @@
 											</header>
 
 											<section class="box features">
-												
 												<div>
 													<div class="row" id="shopContent">
 													</div>
 												</div>
 											</section>
 										</article>
-										<ul class="actions">
+										<ul id="actionButtons" class="actions">
 											<li><button id="prevButton" onclick="prevPressed()" class="button alt">Précédent</button></li>
 											<li><button id="nextButton" onclick="nextPressed()" class="button">Suivant</button></li>
 										</ul>
@@ -206,6 +206,7 @@
 		</div>
 
 		<!-- Scripts -->
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 			<script src="assets/js/shopcontent.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
