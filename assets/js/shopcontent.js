@@ -43,13 +43,19 @@ function addCategory(name){
     var upName = name.id.toUpperCase()
     categoriesTable.forEach((array, ind) => {
         if (array.includes(name.id)){
-            if (categoriesChecked[ind].includes(upName))
-                arrayRemove(categoriesChecked[ind], upName)
-            else
-                categoriesChecked[ind].push(upName)
+            categoriesChecked[ind] = []
+            categoriesChecked[ind].push(upName)
         }
     });
-        
+    displayCategories()
+}
+
+function removeCategory(name){
+    categoriesTable.forEach((array, ind) => {
+        if (array.includes(name.name)){
+            categoriesChecked[ind] = []
+        }
+    });
     displayCategories()
 }
 
@@ -58,13 +64,20 @@ function buildCategory(currentCategory){
     var code = "";
     var title = currentCategory[0]
     currentCategory.forEach((item, index) => { 
-        if (index != 0)
-            content += `
+            if (index == 0)
+                content += `
                 <div>
-                    <input type="checkbox" id="${item}"  onclick="addCategory(${item})">
-                    <label style="cursor: pointer;" for="${item}">${item}</label>
+                    <input type="radio" id="${title + "tous"}" onclick="removeCategory(${item})" name="${title}" checked>
+                    <label style="cursor: pointer;" for="${title + "tous"}">Tous</label>
                 </div>	
-            `
+        `
+        else 
+        content += `
+            <div>
+                <input type="radio" id="${item}" onclick="addCategory(${item})" name="${title}">
+                <label style="cursor: pointer;" for="${item}">${item}</label>
+            </div>	
+        `
     });
 
     code += `
@@ -184,7 +197,7 @@ function onItemClick (index){
     <span style="flex: 50%">
         <img  style="max-width: 300px"  src="${img}" alt="" />
     </span>
-    <div style="flex: 0%; display: inline;">
+    <div style="flex: 50%; display: inline;">
         <header style="margin: 0em; padding: 0em">
         <h2 style="font-size: 2.3em; margin-bottom: 0">${brand}</h2> 
         <p >${price}</p>
