@@ -30,6 +30,13 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 
+/* PRODUCT */
+	.productDetails{
+		display: flex; 
+		margin:0 0 2em 0;
+	}
+/* END PRODUCT*/
+
 /* CAROUSSEL ***********************************/
 	* {box-sizing:border-box}
 
@@ -3411,6 +3418,10 @@ input, select, textarea {
 
 
 	@media screen and (max-width: 736px) {
+		.productDetails{
+			display: block; 
+			margin:0 0 2em 0;
+		}
 		#opentime{
 			border-radius: 25px; 
 			border: 5px;

@@ -49,7 +49,15 @@
 				<nav id="nav">
 
 					<ul>
-						<li ><a href="index.html">Accueil</a></li>
+						<li ><a href="index.html">Accueil</a>
+							<ul>
+								<li><a href="index.html#actu">Actualités</a></li>
+								<li><a href="index.html#concept">Concept</a></li>
+								<li><a href="index.html#magasin">Magasin</a></li>
+								<li><a href="index.html#staff">Staff</a></li>
+								<li><a href="index.html#follow">Réseaux sociaux</a></li>
+							</ul>
+						</li>
 						<li class="current">
 							<a href="shop.html">Nos produits</a>
 							
@@ -71,69 +79,9 @@
 										<!-- Recent Posts -->
 											<section>
 												<h2 class="major" ><span><a href="shop.html">Produits</a></span></h2>
-												<ul class="divided">
-													<li>
-														<article class="box post-summary">
-															<h3><a >Alimentation</a></h3>
-																<div>
-																	<input type="checkbox" id="scales1">
-																	<label onclick="displayCategory('CHIEN')" style="cursor: pointer;" for="scales1">Chien</label>
-																  </div>		
-																  <div>
-																	<input type="checkbox" id="scales" name="chien">
-																	<label onclick="displayCategory('CHAT')" style="cursor: pointer;"  for="scales">Chats</label>
-																  </div>
-																  <div>
-																	<input type="checkbox" id="scales" name="chien">
-																	<label  onclick="displayCategory('RONGEUR')" style="cursor: pointer;" for="scales">Rongeurs</label>
-																  </div>
-																
-														</article>
-													</li>
-													<li>
-														
-														<article class="box post-summary">
-															<h3><a>Accessoires</a></h3>
-																<div>
-																	<input type="checkbox" id="scales" name="chien">
-																	<label onclick="displayCategory('RAFRAICHISSANT')" style="cursor: pointer;" for="scales">Rafraichissant</label>
-																  </div>
-																  <div>
-																	<input type="checkbox" id="scales" name="chien">
-																	<label onclick="displayCategory('HYGIENE')" style="cursor: pointer;" for="scales">Hygiène</label>
-																  </div>
-																  <div>
-																	<input type="checkbox" id="scales" name="chien">
-																	<label onclick="displayCategory('VOITURE')" style="cursor: pointer;" for="scales">Voiture</label>
-																  </div>
-																  <div>
-																	<input type="checkbox" id="scales" name="chien">
-																	<label onclick="displayCategory('EDUCATION')" style="cursor: pointer;" for="scales">Education</label>
-																  </div>
-																  <div>
-																	<input type="checkbox" id="scales" name="chien">
-																	<label onclick="displayCategory('MANTEAU')" style="cursor: pointer;" for="scales">Manteau</label>
-																  </div>
-																  <div>
-																	<input type="checkbox" id="scales" name="chien">
-																	<label onclick="displayCategory('PULL')" style="cursor: pointer;" for="scales">Pull</label>
-																  </div>
-														</article>
-													</li>
-													<li>
-														<article class="box post-summary">
-															<h3><a>Sports</a></h3>
-															<div>
-																<input type="checkbox" id="scales" name="chien">
-																<label onclick="displayCategory('CANICROSS')" style="cursor: pointer;" for="scales">Cani-Cross / Cani-VTT</label>
-															  </div>
-															  <div>
-																<input type="checkbox" id="scales" name="chien">
-																<label onclick="displayCategory('AQUATIQUE')" style="cursor: pointer;"  for="scales">Aquatique</label>
-															  </div>
-														
-														</article>
-													</li>
+												<ul class="divided" id="categoriesMenu">
+												
+								
 												</ul>
 												<!-- <a href="#" class="button alt">Tous les produits</a> -->
 											</section>
@@ -148,11 +96,7 @@
 
 											<header>
 												<h2 id="productTitle">TOUS NOS PRODUITS</h2>
-												<!-- <p>Vous trouverez la totalité de notre catalogue très bientôt !</p> -->
-												<!-- <ul class="meta">
-													<li class="icon fa-clock">5 days ago</li>
-													<li class="icon fa-comments"><a href="#">1,024</a></li>
-												</ul> -->
+
 											</header>
 
 											<section class="box features">
@@ -215,7 +159,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main_scrolly.js"></script>
-			
-
 	</body>
 </html>
