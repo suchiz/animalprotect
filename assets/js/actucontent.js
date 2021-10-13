@@ -3,12 +3,10 @@ var alldata = [];
 var currentDisplay = 0
 var nb_case = 4;
 
-fetch('https://spreadsheets.google.com/feeds/cells/1yKszxtG9r5PM_YPjRIHP4WpwBaEr6KYo24-LdIs7T3Y/2/public/full?alt=json').then(
+fetch('https://sheets.googleapis.com/v4/spreadsheets/1yKszxtG9r5PM_YPjRIHP4WpwBaEr6KYo24-LdIs7T3Y?includeGridData=true&key=AIzaSyAUZhEwzn7-ISGUiaHSRYvO_g0Hy5a44i4').then(
     function (response){ return response.json();}
 ).then(function(obj){
-    // console.log(obj.feed.entry[0]);
-    // document.getElementById("shopContent").innerHTML = `
-  alldata = obj.feed.entry;
+  alldata = obj.sheets[1].data[0].rowData;
   inflate(alldata, currentDisplay);
   inflateSide(alldata, 1, 2);
 }).catch(function(error){
@@ -18,16 +16,16 @@ fetch('https://spreadsheets.google.com/feeds/cells/1yKszxtG9r5PM_YPjRIHP4WpwBaEr
 function inflate(array, page){
     var code = `
                 <header>
-                    <h2 style="font-size: 2.3em;">${alldata[0+(page*nb_case)].content.$t}</h2>
+                    <h2 style="font-size: 2.3em;">${alldata[page].values[0].formattedValue}</h2>
                     <ul class="meta">
-                        <li class="icon fa-clock" style="font-size: 1.5em;">${alldata[1+(page*nb_case)].content.$t}</li>
+                        <li class="icon fa-clock" style="font-size: 1.5em;">${alldata[page].values[1].formattedValue}</li>
                     </ul>
                 </header>
 
                 <section>
-                    <span class="image featured"><img src="${"images/actu/"+alldata[3+(page*nb_case)].content.$t}" alt="" /></span>
+                    <span class="image featured"><img src="${"images/actu/"+alldata[page].values[3].formattedValue}" alt="" /></span>
                     <p style="text-align: justify;">
-                        ${alldata[2+(page*nb_case)].content.$t}
+                        ${alldata[page].values[2].formattedValue}
                     </p>
                 </section>
             `
@@ -38,20 +36,20 @@ function inflateSide(array, ind1, ind2){
     var code = `
                 <li>
                     <article class="box post-summary">
-                        <h3><a style="cursor: pointer;" onclick="actu1Pressed()">${alldata[0+(ind1*nb_case)].content.$t}</a></h3>
+                        <h3><a style="cursor: pointer;" onclick="actu1Pressed()">${alldata[ind1].values[0].formattedValue}</a></h3>
                         <ul class="meta" style="margin-bottom: 1em;">
-                            <li class="icon fa-clock">${alldata[1+(ind1*nb_case)].content.$t}</li>
+                            <li class="icon fa-clock">${alldata[ind1].values[1].formattedValue}</li>
                         </ul>
-                        ${alldata[2+(ind1*nb_case)].content.$t}
+                        ${alldata[ind1].values[2].formattedValue}
                     </article>
                 </li>
                 <li>
                     <article class="box post-summary">
-                        <h3><a style="cursor: pointer;" onclick="actu2Pressed()">${alldata[0+(ind2*nb_case)].content.$t}</a></h3>
+                        <h3><a style="cursor: pointer;" onclick="actu2Pressed()">${alldata[ind2].values[0].formattedValue}</a></h3>
                         <ul class="meta" style="margin-bottom: 1em;">
-                            <li class="icon fa-clock">${alldata[1+(ind2*nb_case)].content.$t}</li>   
+                            <li class="icon fa-clock">${alldata[ind2].values[1].formattedValue}</li>   
                         </ul>
-                        ${alldata[2+(ind2*nb_case)].content.$t} 
+                        ${alldata[ind2].values[2].formattedValue} 
                     </article>
                 </li>
             `
@@ -75,3 +73,5 @@ function actu2Pressed(){
     }
     inflate(alldata, currentDisplay);
 }
+
+

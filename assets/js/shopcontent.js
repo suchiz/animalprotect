@@ -11,25 +11,17 @@ var productTitle = document.getElementById("productTitle");
 var categoriesChecked = []
 var categoriesTable = []
 
-fetch('https://spreadsheets.google.com/feeds/cells/1yKszxtG9r5PM_YPjRIHP4WpwBaEr6KYo24-LdIs7T3Y/1/public/full?alt=json').then(
+fetch('https://sheets.googleapis.com/v4/spreadsheets/1yKszxtG9r5PM_YPjRIHP4WpwBaEr6KYo24-LdIs7T3Y?includeGridData=true&key=AIzaSyAUZhEwzn7-ISGUiaHSRYvO_g0Hy5a44i4').then(
     function (response){ return response.json();}
 ).then(function(obj){
-    alldata = obj.feed.entry;
-        inflate(alldata, 1);
-        productTitle.innerHTML = `TOUS NOS PRODUITS <span style="font-size: 0.8em">(${Math.ceil(alldata.length/colNumber)}  produits)</span> `;
-}).catch(function(error){
-    console.log(error);
-});
-
-fetch('https://spreadsheets.google.com/feeds/cells/1yKszxtG9r5PM_YPjRIHP4WpwBaEr6KYo24-LdIs7T3Y/4/public/full?alt=json').then(
-    function (response){ return response.json();}
-).then(function(obj){
-    initCategories(obj.feed.entry);
+    alldata = obj.sheets[0].data[0].rowData;
+    inflate(alldata, 1);
+    productTitle.innerHTML = `TOUS NOS PRODUITS <span style="font-size: 0.8em">(${alldata.length}  produits)</span> `;
+    initCategories(obj.sheets[3].data[0].rowData);
 
 }).catch(function(error){
     console.log(error);
 });
-
 
 function arrayRemove(array, value) { 
     const index = array.indexOf(value);
@@ -47,12 +39,14 @@ function addCategory(name){
             categoriesChecked[ind].push(upName)
         }
     });
+    console.log(categoriesTable)
+    console.log(categoriesChecked)
     displayCategories()
 }
 
 function removeCategory(name){
     categoriesTable.forEach((array, ind) => {
-        if (array.includes(name.name)){
+        if (array.includes(name)){
             categoriesChecked[ind] = []
         }
     });
@@ -67,7 +61,7 @@ function buildCategory(currentCategory){
             if (index == 0)
                 content += `
                 <div>
-                    <input type="radio" id="${title + "tous"}" onclick="removeCategory(${item})" name="${title}" checked>
+                    <input type="radio" id="${title + "tous"}" onclick="removeCategory('${item}')" name="${title}" checked>
                     <label style="cursor: pointer;" for="${title + "tous"}">Tous</label>
                 </div>	
         `
@@ -94,15 +88,17 @@ function buildCategory(currentCategory){
 function initCategories(categories){
     var code = "";
     var currentCategory = []
-    categories.forEach((item, index) => {
-        
-        if (item.content.$t != "END"){
-            currentCategory.push(item.content.$t)
-        } else {
-            code += buildCategory(currentCategory)
-            categoriesTable.push(currentCategory)
-            currentCategory = [];
-        }
+    categories.forEach((cat, index) => {
+    
+        cat.values.forEach(item => {
+            if (item.formattedValue != "END"){
+                currentCategory.push(item.formattedValue)
+            } else {
+                code += buildCategory(currentCategory)
+                categoriesTable.push(currentCategory)
+                currentCategory = [];
+            }
+        });
     });
     for (var i=0; i < categoriesTable.length; i++)
         categoriesChecked.push([]) ;
@@ -113,57 +109,51 @@ function initCategories(categories){
 function displayCategories(){
     var filteredArray = [];
     alldata.forEach((item, index) => {
-        if(index%colNumber == 0){
-            var currentItem = []
-            var currentItemString = []
-            for (var i=0; i < colNumber; ++i){
-                currentItemString.push(alldata[index+i].content.$t);
-                currentItem.push(alldata[index+i]);
-            }
-            var allGood = true
-            categoriesChecked.forEach((array, _) => {
-                for (var j=0; j < array.length; j++){
-
-                    if (currentItemString.includes(array[j])){
-                        break;
-                    } else {
-                        allGood = false
-                        break;
-                    }
-                }
-            });    
-            if (allGood)
-                filteredArray.push(currentItem)           
+        var currentItemString = []
+        for (var i=0; i < item.values.length; ++i){
+            currentItemString.push(item.values[i].formattedValue);
         }
+
+        var allGood = true
+
+        categoriesChecked.forEach((array, _) => {
+            for (var j=0; j < array.length; j++){
+                if (currentItemString.includes(array[j])){
+                    break;
+                } else {
+                    allGood = false
+                    break;
+                }
+            }
+        });    
+        if (allGood)
+            filteredArray.push(item)           
     });
-    filteredArray = filteredArray.flat()
-    productTitle.innerHTML = `Recherche personalisée <span style="font-size: 0.8em">(${Math.ceil(filteredArray.length/colNumber)}  produits)</span> `;
+    productTitle.innerHTML = `Recherche personalisée <span style="font-size: 0.8em">(${filteredArray.length}  produits)</span> `;
     inflate(filteredArray, 1);
 }
 
-var colNumber = 8
 
 function inflate(array, page){
     var code = "";
     shopdata = array;
-    if (array.length/colNumber > 20){
-        displayed_data = array.slice((page-1)*20*colNumber,page*20*colNumber);
+    if (array.length > 20){
+        displayed_data = array.slice((page-1)*20,page*20);
         if (current_page < max_page)
             nextButton.disabled = false;
         if (max_page == -1)
-            max_page = Math.ceil((array.length/colNumber)/20);
+            max_page = Math.ceil(array.length/20);
     }  
     else {
         displayed_data = array;
         nextButton.disabled = true;
     }
     displayed_data.forEach((item, index) => {
-        if(index%colNumber == 0){
-            var img = "images/produits/"+displayed_data[index+6].content.$t
-            var title = displayed_data[index].content.$t
-            var brand = displayed_data[index+1].content.$t
-            var price = displayed_data[index+2].content.$t+"€"
-            var description = displayed_data[index+5].content.$t
+            var img = "images/produits/"+item.values[6].formattedValue
+            var title = item.values[0].formattedValue
+            var brand = item.values[1].formattedValue
+            var price = item.values[2].formattedValue+"€"
+            var description = item.values[5].formattedValue
             code += `
             <div class="col-3 col-6-medium col-12-small">
                     <section class="box feature" style="cursor: pointer" onclick="onItemClick(${index})">
@@ -177,7 +167,6 @@ function inflate(array, page){
                     </section>
                 </div>
             `
-        }
     });
     document.getElementById("shopContent").innerHTML = code;
 }
@@ -185,11 +174,11 @@ function inflate(array, page){
 prevButton.disabled = true;
 
 function onItemClick (index){
-    var img = "images/produits/"+displayed_data[index+6].content.$t
-    var title = displayed_data[index].content.$t
-    var brand = displayed_data[index+1].content.$t
-    var price = displayed_data[index+2].content.$t+"€"
-    var longDescription = displayed_data[index+7].content.$t
+    var img = "images/produits/"+displayed_data[index].values[6].formattedValue
+    var title = displayed_data[index].values[0].formattedValue
+    var brand = displayed_data[index].values[1].formattedValue
+    var price = displayed_data[index].values[2].formattedValue+"€"
+    var longDescription = displayed_data[index].values[7].formattedValue
     productTitle.innerHTML = `${title}`;
     var code = `
     <article class="box page-content">
@@ -230,7 +219,7 @@ function backPressed(){
     $('html, body').animate({ scrollTop: 0 }, 'medium');
 else
     $('html, body').animate({ scrollTop: 400 }, 'medium');
-    productTitle.innerHTML = `TOUS NOS PRODUITS <span style="font-size: 0.8em">(${Math.ceil(alldata.length/colNumber)}  produits)</span> `
+    productTitle.innerHTML = `TOUS NOS PRODUITS <span style="font-size: 0.8em">(${alldata.length}  produits)</span> `
 }
 
 function nextPressed(){
