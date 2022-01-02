@@ -40,7 +40,9 @@ function inflateSide(array, ind1, ind2){
                         <ul class="meta" style="margin-bottom: 1em;">
                             <li class="icon fa-clock">${alldata[ind1].values[1].formattedValue}</li>
                         </ul>
-                        ${alldata[ind1].values[2].formattedValue}
+                        <p class="side">
+                            ${alldata[ind1].values[2].formattedValue}
+                        </p>
                     </article>
                 </li>
                 <li>
@@ -49,7 +51,9 @@ function inflateSide(array, ind1, ind2){
                         <ul class="meta" style="margin-bottom: 1em;">
                             <li class="icon fa-clock">${alldata[ind2].values[1].formattedValue}</li>   
                         </ul>
-                        ${alldata[ind2].values[2].formattedValue} 
+                        <p class="side">
+                            ${alldata[ind2].values[2].formattedValue}
+                        </p>
                     </article>
                 </li>
             `
